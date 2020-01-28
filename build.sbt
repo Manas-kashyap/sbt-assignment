@@ -5,3 +5,4 @@ import sbt._
 import Keys._
 lazy val welcomeimpl = project.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % "test").dependsOn(util)
 lazy val util = project
+lazy val root =project.in(file(".")).aggregate(welcomeimpl,util)
